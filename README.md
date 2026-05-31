@@ -1,4 +1,4 @@
-# Cross-Domain Few-Shot Segmentation via Multi-view Progressive Adaptation
+# [CVPR 2026] Cross-Domain Few-Shot Segmentation via Multi-view Progressive Adaptation
 
 The official implementation of "Cross-Domain Few-Shot Segmentation via Multi-view Progressive Adaptation".
 More detailed information is in the [PAPER](https://arxiv.org/pdf/2401.08407.pdf). -->
