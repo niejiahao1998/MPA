@@ -1,7 +1,7 @@
 # [CVPR 2026] Cross-Domain Few-Shot Segmentation via Multi-view Progressive Adaptation
 
 The official implementation of "Cross-Domain Few-Shot Segmentation via Multi-view Progressive Adaptation".
-More detailed information is in the [PAPER](https://arxiv.org/pdf/2401.08407.pdf). -->
+More detailed information is in the [PAPER](https://arxiv.org/pdf/2602.05217).
 
 Authors: [Jiahao Nie<sup>*</sup>](https://scholar.google.com/citations?user=LGM10RQAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao) Guanqiao Fu<sup>*</sup>, [Wenbin An](https://scholar.google.com/citations?user=BpkQZGgAAAAJ&hl=zh-CN&oi=ao), [Yap-Peng Tan](https://scholar.google.com/citations?user=9sQVUMoAAAAJ&hl=zh-CN)</a>, [Alex C. Kot](https://scholar.google.com/citations?user=UGZXLxIAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao), [Shijian Lu](https://scholar.google.com/citations?user=uYmK-A0AAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao)
 
@@ -12,15 +12,6 @@ Authors: [Jiahao Nie<sup>*</sup>](https://scholar.google.com/citations?user=LGM1
 
 ## Datasets
 The following datasets are used for evaluation in CD-FSS:
-
-### Source domain: 
-* **PASCAL VOC2012**:
-
-    Download PASCAL VOC2012 devkit (train/val data):
-    ```bash
-    wget http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar
-    ```
-    Download PASCAL VOC2012 SDS extended mask annotations from [[Google Drive](https://drive.google.com/file/d/10zxG2VExoEZUeyQl_uXga2OWHjGeZaf2/view?usp=sharing)].
 
 ### Target domains: 
 * **Deepglobe**:
@@ -121,18 +112,11 @@ CUDA_VISIBLE_DEVICES=0 python -W ignore mpa.py \
   --backbone resnet50 --batch-size 12 --shot 1 --refine --lr 0.0005
 ```
 
-You can use our trained models for evaluation directly:
-```
-CUDA_VISIBLE_DEVICES=0 python -W ignore test.py \
-  --dataset deepglobe --data-root ./dataset \
-  --backbone resnet50 --batch-size 96 --shot 1 --refine
-```
-
 Please note that the performances may flutuate within a small range because of differnet batch-sizes, seeds, devices, and environments.
 
 ## Citation
 If you use this codebase for your research, please consider citing:
-```bash
+```
 @article{nie2026cross,
   title={Cross-Domain Few-Shot Segmentation via Multi-view Progressive Adaptation},
   author={Nie, Jiahao and Fu, Guanqiao and An, Wenbin and Tan, Yap-Peng and Kot, Alex C and Lu, Shijian},
@@ -141,7 +125,7 @@ If you use this codebase for your research, please consider citing:
 }
  ```
 
- ```bash
+ ```
 @article{nie2024cross,
   title={Cross-Domain Few-Shot Segmentation via Iterative Support-Query Correspondence Mining},
   author={Nie, Jiahao and Xing, Yun and Zhang, Gongjie and Yan, Pei and Xiao, Aoran and Tan, Yap-Peng and Kot, Alex C and Lu, Shijian},
@@ -150,7 +134,7 @@ If you use this codebase for your research, please consider citing:
 }
  ```
 
- ```bash
+ ```
 @article{nie2026boosting,
   title={Boosting SAM for Cross-Domain Few-Shot Segmentation via Conditional Point Sparsification},
   author={Nie, Jiahao and Xing, Yun and An, Wenbin and Zhao, Qingsong and Shao, Jiawei and Tan, Yap-Peng and Kot, Alex C and Lu, Shijian and Li, Xuelong},
@@ -163,10 +147,3 @@ If you use this codebase for your research, please consider citing:
 Our codebase is built based on [IFA](https://github.com/niejiahao1998/IFA), [PATNet](https://github.com/slei109/PATNet), and [SSP](https://github.com/fanq15/SSP)'s official code.
 
 We also thank [HSNet](https://github.com/juhongm999/hsnet) and other FSS and CD-FSS works for their great contributions.
-
-## Reference
-<!-- [1] Shuo Lei, Xuchao Zhang, Jianfeng He, Fanglan Chen, Bowen Du, and Chang-Tien Lu. Cross-domain few-shot semantic segmentation. ECCV, 2022.
-
-[2] Qi Fan, Wenjie Pei, Yu-Wing Tai, and Chi-Keung Tang. Self-support few-shot semantic segmentation. ECCV, 2022.
-
-[3] Juhong Min, Dahyun Kang, and Minsu Cho. Hypercorrelation squeeze for few-shot segmentation. ICCV, 2021. -->
